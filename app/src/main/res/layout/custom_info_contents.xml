@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingStart="6dp"
+    android:paddingTop="6dp">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/vector_vet_office_info_window" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/badge"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLines="3"
+                tools:text="Nume"/>
+
+            <TextView
+                android:id="@+id/snippet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:maxLines="2"
+                tools:text="Adresa"/>
+
+            <TextView
+                android:id="@+id/open_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textSize="14dp"
+                tools:text="Open"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/badge"
+            android:background="@color/blue_grey"
+            android:layout_marginTop="24dp">
+        </View>
+
+        <Button
+            android:id="@+id/callVet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="@string/call"
+            android:paddingEnd="6dp"
+            android:paddingStart="6dp"
+            android:textColor="@color/blue_grey"
+            android:layout_below="@id/separator"
+            android:layout_centerHorizontal="true"
+            android:drawableLeft="@drawable/vector_call"
+            android:drawablePadding="6dp"></Button>
+    </RelativeLayout>
+</RelativeLayout>

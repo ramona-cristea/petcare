@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Pet Care</string>
+    <string name="my_pets">My Pets</string>
+    <string name="add_pet">Add a Pet</string>
+    <string name="pet_name">Name *</string>
+    <string name="overview">Overview</string>
+    <string name="pet_breed">Breed *</string>
+    <string name="pet_age">Age *</string>
+    <string name="pet_is_adopted">Adopted</string>
+    <string name="info">Info</string>
+    <string name="measurement">Measurement</string>
+    <string name="health_notes">Health Notes</string>
+    <string name="pet_weight">Weight in kg</string>
+    <string name="pet_height">Height in cm</string>
+    <string name="additional_health_notes">Addition health notes</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_edit">Edit</string>
+    <string name="pet_is_female">Female</string>
+    <string name="pet_is_male">Male</string>
+    <string name="pet_is_neutered">Neutered</string>
+    <string name="pet_is_not_neutered">Not neutered</string>
+    <string name="yes">Yes</string>
+    <string name="pet_temper">Temper</string>
+    <string name="error_mandatory_fields">Please fill the mandatory information about your pet!</string>
+    <string name="error_picture_missing">Please add a picture for your pet!</string>
+    <string name="camera_permission_expanation">App needs camera permission in order to take a picture of your pet</string>
+    <string name="storage_permission_expanation">App needs storage permission in order to select a picture from Gallery</string>
+    <string name="years">years old</string>
+
+    <string name="pet_breed_details">Breed</string>
+    <string name="pet_breed_value">French Bulldog</string>
+
+    <string name="pet_age_details">Age</string>
+    <string name="pet_age_value">2</string>
+    <string name="pet_temper_value">Playful and loving boy</string>
+    <string name="pet_gender_value">Male</string>
+    <string name="pet_gender_details">Gender</string>
+    <string name="pet_status_details">Status</string>
+    <string name="pet_height_value">35 cm</string>
+    <string name="pet_weight_value">4 kg</string>
+    <string name="pet_health_notes_value">Weight Problem</string>
+    <string name="image_pet_content_description">Pet image</string>
+    <string name="image_adoption_status_content_description">Adoption status</string>
+    <string name="image_overview_content_description">Pet overview</string>
+    <string name="image_info_content_description">Pet info</string>
+    <string name="image_button_add_pet_picture_content_description">Add pet picture button</string>
+    <string name="image_measurement_content_description">Pet measurements</string>
+    <string name="image_health_notes_content_description">Pet additional health notes</string>
+    <string name="button_search_vet">Search Vet</string>
+    <string name="edit_pet">Edit Pet Details</string>
+    <string name="find_a_vet">Find a vet</string>
+
+    <string name="permission_rationale">Location permission is needed in order to display veterinary offices</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed in order to display veterinary offices.</string>
+    <string name="settings">Settings</string>
+    <string name="settings_error">Location settings are inadequate, and cannot be fixed here. Fix in Settings.</string>
+    <string name="load_places_error" translatable="true">Please check your internet connection and try again!</string>
+    <string name="zero_places_error" translatable="true">There are no veterinary offices nearby!</string>
+    <string name="call">Call</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="is_open">Open</string>
+    <string name="is_closed">Closed</string>
+</resources>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/add_pet_layout"
+    android:fillViewport="true"
+    tools:context=".AddPetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/layout_main_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp">
+
+            <ImageButton
+                android:id="@+id/image_button_add_pet_picture"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/vector_add_photo"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:padding="28dp"
+                android:background="@drawable/selector_round_drawable"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                android:contentDescription="@string/image_button_add_pet_picture_content_description"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pet_image"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/vector_add_photo"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/colorAccent"
+                android:layout_centerVertical="true"
+                android:visibility="invisible"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/container_pet_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/image_button_add_pet_picture"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="30">
+
+                <EditText
+                    android:id="@+id/edit_pet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:hint="@string/pet_name"
+                    android:inputType="textCapSentences"
+                    android:nextFocusDown="@+id/edit_pet_breed"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/main_data_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_below="@id/layout_main_data"/>
+
+        <TextView
+            android:id="@+id/label_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overview"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@id/main_data_separator"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginStart="@dimen/margin_16dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_pet_breed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_6dp"
+            android:layout_below="@id/label_overview">
+
+            <EditText
+                android:id="@+id/edit_pet_breed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="@string/pet_breed"
+                android:inputType="textCapSentences"
+                android:nextFocusDown="@+id/edit_pet_age"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_pet_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_below="@id/container_pet_breed">
+
+            <EditText
+                android:id="@+id/edit_pet_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="@string/pet_age"
+                android:inputType="textCapSentences"
+                android:nextFocusDown="@+id/edit_pet_temper"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_pet_temper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_below="@id/container_pet_age">
+
+            <EditText
+                android:id="@+id/edit_pet_temper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="@string/pet_temper"
+                android:inputType="textCapSentences"
+                android:nextFocusDown="@+id/radio_male"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:id="@+id/overview_data_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_below="@id/container_pet_temper"
+            android:layout_marginTop="@dimen/margin_16dp"/>
+
+        <TextView
+            android:id="@+id/label_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@id/overview_data_separator"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginStart="@dimen/margin_16dp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/label_info"
+            android:layout_marginTop="@dimen/margin_10dp">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pet_is_male"
+                android:nextFocusDown="@+id/radio_female"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/text_grey_color"
+                android:checked="true"
+                />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pet_is_female"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:padding="@dimen/margin_10dp"
+                android:layout_marginStart="@dimen/margin_16dp"
+                android:textColor="@color/text_grey_color"
+                android:nextFocusDown="@+id/checkbox_neutered"/>
+
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/checkbox_neutered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_group_gender"
+            android:text="@string/pet_is_neutered"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/text_grey_color"
+            android:layout_marginTop="@dimen/margin_10dp"
+            android:nextFocusDown="@+id/checkbox_adopted"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_adopted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/radio_group_gender"
+            android:text="@string/pet_is_adopted"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:padding="@dimen/margin_10dp"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_toEndOf="@+id/checkbox_neutered"
+            android:textColor="@color/text_grey_color"
+            android:nextFocusDown="@+id/edit_pet_weight"/>
+
+        <View
+            android:id="@+id/info_data_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_below="@id/checkbox_neutered"
+            android:layout_marginTop="@dimen/margin_16dp"/>
+
+        <TextView
+            android:id="@+id/label_measurement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/measurement"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@id/info_data_separator"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginStart="@dimen/margin_16dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_pet_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_measurement"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_6dp">
+
+            <EditText
+                android:id="@+id/edit_pet_weight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="@string/pet_weight"
+                android:inputType="textCapSentences"
+                android:nextFocusDown="@+id/edit_pet_height"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_pet_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_below="@id/container_pet_weight">
+
+            <EditText
+                android:id="@+id/edit_pet_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="@string/pet_height"
+                android:inputType="textCapSentences"
+                android:nextFocusDown="@+id/edit_pet_health_notes"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:id="@+id/measurement_data_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_below="@id/container_pet_height"
+            android:layout_marginTop="@dimen/margin_16dp"/>
+
+        <TextView
+            android:id="@+id/label_health_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/health_notes"
+            android:textColor="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:layout_below="@id/measurement_data_separator"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_16dp"
+            android:layout_marginStart="@dimen/margin_16dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_pet_health_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_health_notes"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_16dp"
+            android:layout_marginEnd="@dimen/margin_16dp"
+            android:layout_marginBottom="@dimen/margin_16dp"
+            android:layout_marginTop="@dimen/margin_6dp">
+
+            <EditText
+                android:id="@+id/edit_pet_health_notes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:hint="@string/additional_health_notes"
+                android:inputType="textCapSentences"
+                />
+        </android.support.design.widget.TextInputLayout>
+
+    </RelativeLayout>
+</ScrollView>
