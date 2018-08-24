@@ -22,6 +22,32 @@ allprojects {
     }
 }
 
+// Global variables
+ext {
+    // java version
+    javaVersion = JavaVersion.VERSION_1_8
+
+    // android specific versions
+    compileSdkVersion = 27
+    buildToolsVersion = "27.0.3"
+    minSdkVersion = 21
+    targetSdkVersion = 27
+
+    // dependency versions
+    junitVersion = "4.12"
+    testRunnerVersion = "1.0.2"
+    supportFrameworkVersion = "27.1.1"
+    constraintLayoutVersion = "1.1.0"
+    espressoVersion = "3.0.2"
+    picassoVersion = "2.71828"
+    gsonVersion = "2.8.2"
+    playServicesVersion = "15.0.1"
+    retrofitVersion = "2.3.0"
+    circleImageViewVersion = "2.2.0"
+    imageFileSelectorVersion = "1.0.12"
+    architectureComponentsVersion = "1.1.1"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

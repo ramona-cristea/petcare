@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingStart="6dp"
-    android:paddingTop="6dp">
+    android:paddingStart="@dimen/margin_6dp"
+    android:paddingEnd="@dimen/margin_6dp"
+    android:paddingTop="@dimen/margin_6dp">
 
     <RelativeLayout
         android:layout_width="300dp"
@@ -15,8 +16,9 @@
             android:id="@+id/badge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="@dimen/margin_6dp"
             android:adjustViewBounds="true"
+            android:contentDescription="@string/vet_info_window"
             tools:src="@drawable/vector_vet_office_info_window" />
 
         <LinearLayout
@@ -24,8 +26,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_toEndOf="@id/badge"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp">
+            android:layout_marginEnd="@dimen/margin_6dp"
+            android:layout_marginStart="@dimen/margin_6dp">
 
             <TextView
                 android:id="@+id/title"
@@ -40,7 +42,7 @@
                 android:id="@+id/snippet"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:maxLines="2"
                 tools:text="Adresa"/>
 
@@ -50,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:singleLine="true"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 tools:text="Open"/>
         </LinearLayout>
 
@@ -69,12 +71,12 @@
             android:layout_height="wrap_content"
             style="?android:attr/borderlessButtonStyle"
             android:text="@string/call"
-            android:paddingEnd="6dp"
-            android:paddingStart="6dp"
+            android:paddingEnd="@dimen/margin_6dp"
+            android:paddingStart="@dimen/margin_6dp"
             android:textColor="@color/blue_grey"
             android:layout_below="@id/separator"
             android:layout_centerHorizontal="true"
-            android:drawableLeft="@drawable/vector_call"
-            android:drawablePadding="6dp"></Button>
+            android:drawableStart="@drawable/vector_call"
+            android:drawablePadding="6dp"/>
     </RelativeLayout>
 </RelativeLayout>

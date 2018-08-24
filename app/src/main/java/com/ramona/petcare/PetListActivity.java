@@ -25,7 +25,7 @@ import java.util.List;
 public class PetListActivity extends AppCompatActivity implements PetsAdapter.OnPetClickListener{
 
     private PetsAdapter mAdapter;
-    LinearLayoutManager mLayoutManager;
+    private LinearLayoutManager mLayoutManager;
     private Parcelable mSavedRecyclerLayoutState;
     private static final String BUNDLE_RECYCLER_LAYOUT = "recycler_layout";
 

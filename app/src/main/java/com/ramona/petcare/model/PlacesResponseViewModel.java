@@ -9,10 +9,10 @@ import com.ramona.petcare.api.PlacesRepository;
 import com.ramona.petcare.api.PlacesRepositoryImpl;
 
 public class PlacesResponseViewModel extends ViewModel{
-    private MediatorLiveData<PlacesApiResponse> mPlacesWrapper;
-    private MediatorLiveData<PlaceDetailsResponse> mPlaceDetailsWrapper;
+    private final MediatorLiveData<PlacesApiResponse> mPlacesWrapper;
+    private final MediatorLiveData<PlaceDetailsResponse> mPlaceDetailsWrapper;
 
-    private PlacesRepository mPlacesRepository;
+    private final PlacesRepository mPlacesRepository;
 
     public PlacesResponseViewModel() {
         mPlacesWrapper = new MediatorLiveData<>();

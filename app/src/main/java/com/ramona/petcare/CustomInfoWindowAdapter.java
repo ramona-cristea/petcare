@@ -8,7 +8,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.Marker;
 import com.ramona.petcare.model.PlaceResult;
 
-public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter{
+class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter{
 
     private final View mContents;
 

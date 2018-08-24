@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class PetsWidgetProvider extends AppWidgetProvider {
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+    private static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId, List<Pet> pets) {
 
         // Construct the RemoteViews object

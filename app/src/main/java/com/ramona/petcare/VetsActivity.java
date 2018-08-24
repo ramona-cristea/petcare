@@ -71,7 +71,6 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
             UPDATE_INTERVAL_IN_MILLISECONDS / 2;
 
     private GoogleMap mMap;
-    MapView mMapView;
 
     private SettingsClient mSettingsClient;
     private Location mCurrentLocation;
@@ -81,10 +80,10 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private FusedLocationProviderClient mFusedLocationClient;
     private LocationCallback mLocationCallback;
 
-    PlacesResponseViewModel mPlacesViewModel;
-    ProgressBar mLoadingIndicator;
-    Marker mCurrentClickedMarker;
-    String markerPlaceId;
+    private PlacesResponseViewModel mPlacesViewModel;
+    private ProgressBar mLoadingIndicator;
+    private Marker mCurrentClickedMarker;
+    private String markerPlaceId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,11 +100,11 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         mLoadingIndicator = findViewById(R.id.progress_bar);
-        mMapView = findViewById(R.id.map);
-        if(mMapView != null){
-            mMapView.onCreate(null);
-            mMapView.onResume();
-            mMapView.getMapAsync(this);
+        MapView mapView = findViewById(R.id.map);
+        if(mapView != null){
+            mapView.onCreate(null);
+            mapView.onResume();
+            mapView.getMapAsync(this);
         }
         mSettingsClient = LocationServices.getSettingsClient(this);
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
@@ -122,12 +121,6 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
     protected void onPause() {
         super.onPause();
         stopLocationUpdates();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
     }
 
     private void createLocationCallback() {
@@ -356,7 +349,7 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void addResultsOnMap(List<PlaceResult> results) {
         LatLngBounds.Builder builder = new LatLngBounds.Builder();
-        BitmapDescriptor markerIcon = vectorToBitmap(R.drawable.ic_hospital_location_white_2);
+        BitmapDescriptor markerIcon = vectorToBitmap(R.drawable.vector_vet_office);
 
         for(PlaceResult place : results) {
             LatLng position = new LatLng(place.geometry.location.lat, place.geometry.location.lng);

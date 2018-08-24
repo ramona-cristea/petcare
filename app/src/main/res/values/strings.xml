@@ -19,7 +19,6 @@
     <string name="pet_is_male">Male</string>
     <string name="pet_is_neutered">Neutered</string>
     <string name="pet_is_not_neutered">Not neutered</string>
-    <string name="yes">Yes</string>
     <string name="pet_temper">Temper</string>
     <string name="error_mandatory_fields">Please fill the mandatory information about your pet!</string>
     <string name="error_picture_missing">Please add a picture for your pet!</string>
@@ -57,8 +56,10 @@
     <string name="load_places_error" translatable="true">Please check your internet connection and try again!</string>
     <string name="zero_places_error" translatable="true">There are no veterinary offices nearby!</string>
     <string name="call">Call</string>
-    <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
     <string name="is_open">Open</string>
     <string name="is_closed">Closed</string>
+    <string name="vet_info_window">Veterinary office info</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="canceled">Canceled</string>
+    <string name="unknown_error">Unknown Error</string>
 </resources>

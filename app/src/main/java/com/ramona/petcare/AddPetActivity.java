@@ -41,18 +41,18 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class AddPetActivity extends AppCompatActivity implements View.OnClickListener{
 
-    RadioGroup mPetGenderRadioGroup;
-    EditText mPetNameEdit;
-    ImageButton mAddPetImageButton;
-    EditText mPetBreedEdit;
-    EditText mPetAgeEdit;
-    EditText mPetTemperEdit;
-    CheckBox mIsNeuteredCheckbox;
-    CheckBox mIsAdoptedCheckbox;
-    EditText mPetWeightEdit;
-    EditText mPetHeightEdit;
-    EditText mPetHealthNotesEdit;
-    CircleImageView mPetImageView;
+    private RadioGroup mPetGenderRadioGroup;
+    private EditText mPetNameEdit;
+    private ImageButton mAddPetImageButton;
+    private EditText mPetBreedEdit;
+    private EditText mPetAgeEdit;
+    private EditText mPetTemperEdit;
+    private CheckBox mIsNeuteredCheckbox;
+    private CheckBox mIsAdoptedCheckbox;
+    private EditText mPetWeightEdit;
+    private EditText mPetHeightEdit;
+    private EditText mPetHealthNotesEdit;
+    private CircleImageView mPetImageView;
 
     private ImageFileSelector mImageFileSelector;
 
@@ -150,13 +150,13 @@ public class AddPetActivity extends AppCompatActivity implements View.OnClickLis
             public void onError(ErrorResult errorResult) {
                 switch (errorResult) {
                     case permissionDenied:
-                        Toast.makeText(AddPetActivity.this, "Permission Denied", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AddPetActivity.this, getString(R.string.permission_denied), Toast.LENGTH_LONG).show();
                         break;
                     case canceled:
-                        Toast.makeText(AddPetActivity.this, "Canceled", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AddPetActivity.this, getString(R.string.canceled), Toast.LENGTH_LONG).show();
                         break;
                     case error:
-                        Toast.makeText(AddPetActivity.this, "Unknown Error", Toast.LENGTH_LONG).show();
+                        Toast.makeText(AddPetActivity.this, getString(R.string.unknown_error), Toast.LENGTH_LONG).show();
                         break;
                 }
             }
