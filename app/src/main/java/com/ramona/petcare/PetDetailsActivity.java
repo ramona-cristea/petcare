@@ -103,8 +103,7 @@ public class PetDetailsActivity extends AppCompatActivity implements View.OnClic
         mTextViewBreed.setText(mPet.getPetBreed());
 
         if(mPet.getPetAge().matches("^[0-9]*$")){
-            String age = mPet.getPetAge() + " " + mTextViewAge.getResources().getString(R.string.years);
-            mTextViewAge.setText(age);
+            mTextViewAge.setText(mTextViewAge.getResources().getString(R.string.pet_age_info, mPet.getPetAge()));
         }
         else {
             mTextViewAge.setText(mPet.getPetAge());
@@ -131,7 +130,7 @@ public class PetDetailsActivity extends AppCompatActivity implements View.OnClic
         if(!TextUtils.isEmpty(mPet.getAdditionalHealthNotes())) {
             mTextViewHealthNotes.setText(mPet.getAdditionalHealthNotes());
         }
-        mTextViewAdoptionStatus.setVisibility(mPet.isAdopted() ? View.VISIBLE : View.GONE);
+        mTextViewAdoptionStatus.setVisibility(mPet.isAdopted() ? View.VISIBLE : View.INVISIBLE);
     }
 
     @Override
@@ -156,11 +155,7 @@ public class PetDetailsActivity extends AppCompatActivity implements View.OnClic
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem itemDelete = menu.findItem(R.id.action_edit);
-        if (!appBarExpanded) {
-            itemDelete.setVisible(true);
-        } else {
-            itemDelete.setVisible(false);
-        }
+        itemDelete.setVisible(!appBarExpanded);
 
         return true;
     }

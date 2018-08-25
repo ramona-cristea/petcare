@@ -24,7 +24,7 @@
     <string name="error_picture_missing">Please add a picture for your pet!</string>
     <string name="camera_permission_expanation">App needs camera permission in order to take a picture of your pet</string>
     <string name="storage_permission_expanation">App needs storage permission in order to select a picture from Gallery</string>
-    <string name="years">years old</string>
+    <string name="pet_age_info">%1$s years old</string>
 
     <string name="pet_breed_details">Breed</string>
     <string name="pet_breed_value">French Bulldog</string>
@@ -62,4 +62,5 @@
     <string name="permission_denied">Permission Denied</string>
     <string name="canceled">Canceled</string>
     <string name="unknown_error">Unknown Error</string>
+    <string name="pet_transition">pet_transition</string>
 </resources>

@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:hint="@string/pet_age"
-                android:inputType="textCapSentences"
+                android:inputType="text"
                 android:nextFocusDown="@+id/edit_pet_temper"
                 />
         </android.support.design.widget.TextInputLayout>
@@ -262,7 +262,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:hint="@string/pet_weight"
-                android:inputType="textCapSentences"
+                android:inputType="number|numberDecimal"
                 android:nextFocusDown="@+id/edit_pet_height"
                 />
         </android.support.design.widget.TextInputLayout>
@@ -282,7 +282,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:hint="@string/pet_height"
-                android:inputType="textCapSentences"
+                android:inputType="number"
                 android:nextFocusDown="@+id/edit_pet_health_notes"
                 />
         </android.support.design.widget.TextInputLayout>

@@ -51,6 +51,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import com.ramona.petcare.api.PlacesApiResponseCodes;
 import com.ramona.petcare.model.PlaceDetailsResponse;
 import com.ramona.petcare.model.PlaceResult;
 import com.ramona.petcare.model.PlacesApiResponse;
@@ -313,11 +314,11 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private void handleResponse(PlacesApiResponse placesResponse) {
         mLoadingIndicator.setVisibility(View.GONE);
-        if(placesResponse == null || placesResponse.status.equals("UNKNOWN_ERROR")) {
+        if(placesResponse == null || placesResponse.status.equals(PlacesApiResponseCodes.RESPONSE_UNKNOWN_ERROR)) {
             Toast.makeText(this, getString(R.string.load_places_error), Toast.LENGTH_SHORT).show();
-        } else if(placesResponse.status.equals("ZERO_RESULTS")) {
+        } else if(placesResponse.status.equals(PlacesApiResponseCodes.RESPONSE_ZERO_RESULTS)) {
             Toast.makeText(this, getString(R.string.zero_places_error), Toast.LENGTH_SHORT).show();
-        } else if (placesResponse.status.equals("OK")) {
+        } else if (placesResponse.status.equals(PlacesApiResponseCodes.RESPONSE_OK)) {
             if(mMap != null) {
                 addResultsOnMap(placesResponse.getResults());
                 if(!TextUtils.isEmpty(markerPlaceId)) {
@@ -331,17 +332,15 @@ public class VetsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void handlePlaceDetailsResponse(PlaceDetailsResponse response) {
         mLoadingIndicator.setVisibility(View.GONE);
 
-        if(response == null || response.status.equals("UNKNOWN_ERROR")) {
+        if(response == null || response.status.equals(PlacesApiResponseCodes.RESPONSE_UNKNOWN_ERROR)) {
             Toast.makeText(this, getString(R.string.load_places_error), Toast.LENGTH_SHORT).show();
-        } else if (response.status.equals("OK")) {
+        } else if (response.status.equals(PlacesApiResponseCodes.RESPONSE_OK)) {
             if(mCurrentClickedMarker != null) {
                 PlaceResult place = (PlaceResult) mCurrentClickedMarker.getTag();
                 if(place != null) {
                     place.placeDetails = response.getResult();
                     mCurrentClickedMarker.setTag(place);
                     showInfoWindowForCurrentMarker();
-//                    mCurrentClickedMarker.showInfoWindow();
-//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(mCurrentClickedMarker.getPosition(), 13.0f));
                 }
             }
         }

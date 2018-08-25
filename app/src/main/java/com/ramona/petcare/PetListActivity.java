@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Parcelable;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.transition.Slide;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.Gravity;
+import android.view.View;
 
 import com.ramona.petcare.database.AppDatabase;
 import com.ramona.petcare.model.Pet;
@@ -91,10 +94,14 @@ public class PetListActivity extends AppCompatActivity implements PetsAdapter.On
     }
 
     @Override
-    public void onClick(Pet pet) {
-        Intent petDetailsIntent = new Intent(this, PetDetailsActivity.class);
-        petDetailsIntent.putExtra("pet_uid", pet.getUid());
-        startActivity(petDetailsIntent);
+    public void onClick(Pet pet, View imageView) {
+        Intent intent = new Intent(this, PetDetailsActivity.class);
+        ActivityOptionsCompat options = ActivityOptionsCompat.
+                makeSceneTransitionAnimation(this,
+                        imageView,
+                        ViewCompat.getTransitionName(imageView));
+        intent.putExtra("pet_uid", pet.getUid());
+        startActivity(intent, options.toBundle());
     }
 
     private static class DeletePetAsyncTask extends AsyncTask<Integer, Void, Void> {

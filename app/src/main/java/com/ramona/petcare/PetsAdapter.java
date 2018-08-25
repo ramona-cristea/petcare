@@ -54,7 +54,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
     }
 
     public interface OnPetClickListener {
-        void onClick(Pet pet);
+        void onClick(Pet pet, View imageView);
     }
 
     public class PetViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -84,7 +84,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
             String petInfo;
 
             if(mPet.getPetAge().matches("^[0-9]*$")){
-                petInfo = mPet.getPetAge() + " " + textPetName.getResources().getString(R.string.years);
+                petInfo = textPetInfo.getResources().getString(R.string.pet_age_info, mPet.getPetAge());
             }
             else {
                 petInfo = mPet.getPetAge();
@@ -102,7 +102,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.PetViewHolder>
 
         @Override
         public void onClick(View view) {
-            mPetClickListener.onClick(mPet);
+            mPetClickListener.onClick(mPet, imagePet);
         }
     }
 }
