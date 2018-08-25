@@ -63,4 +63,8 @@
     <string name="canceled">Canceled</string>
     <string name="unknown_error">Unknown Error</string>
     <string name="pet_transition">pet_transition</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_photo">Add Photo</string>
 </resources>

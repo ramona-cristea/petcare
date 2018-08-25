@@ -26,21 +26,20 @@ import com.squareup.picasso.Picasso;
 import java.io.File;
 
 public class PetDetailsActivity extends AppCompatActivity implements View.OnClickListener{
-    boolean appBarExpanded = false;
-    Pet mPet;
+    private boolean appBarExpanded = false;
+    private Pet mPet;
 
-    TextView mTextViewBreed;
-    TextView mTextViewAge;
-    TextView mTextViewTemper;
-    TextView mTextViewGender;
-    TextView mTextViewStatus;
-    TextView mTextViewWeight;
-    TextView mTextViewHeight;
-    TextView mTextViewHealthNotes;
-    TextView mTextViewAdoptionStatus;
-    AppCompatButton mButtonSearchVet;
-    ImageView mImageViewPetPicture;
-    CollapsingToolbarLayout mCollapsingToolbar;
+    private TextView mTextViewBreed;
+    private TextView mTextViewAge;
+    private TextView mTextViewTemper;
+    private TextView mTextViewGender;
+    private TextView mTextViewStatus;
+    private TextView mTextViewWeight;
+    private TextView mTextViewHeight;
+    private TextView mTextViewHealthNotes;
+    private TextView mTextViewAdoptionStatus;
+    private ImageView mImageViewPetPicture;
+    private CollapsingToolbarLayout mCollapsingToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +62,7 @@ public class PetDetailsActivity extends AppCompatActivity implements View.OnClic
         mTextViewWeight = findViewById(R.id.weight_value);
         mTextViewHeight = findViewById(R.id.height_value);
         mTextViewHealthNotes = findViewById(R.id.health_notes_value);
-        mButtonSearchVet = findViewById(R.id.button_search_vet);
+        AppCompatButton buttonSearchVet = findViewById(R.id.button_search_vet);
         mTextViewAdoptionStatus = findViewById(R.id.text_adoption_status);
 
         AppBarLayout appBarLayout = findViewById(R.id.appbar);
@@ -84,7 +83,7 @@ public class PetDetailsActivity extends AppCompatActivity implements View.OnClic
 
         FloatingActionButton fabEditButton = findViewById(R.id.fab_edit_button);
         fabEditButton.setOnClickListener(this);
-        mButtonSearchVet.setOnClickListener(this);
+        buttonSearchVet.setOnClickListener(this);
 
         viewModel.petLiveData.observe(this, petDetails -> showPetDetails(petDetails));
     }

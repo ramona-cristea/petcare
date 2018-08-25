@@ -22,7 +22,7 @@ public class PlacesRepositoryImpl implements PlacesRepository {
     private static final String FIELDS = "name,rating,formatted_address,opening_hours,formatted_phone_number";
     private static final int RADIUS = 6500;
 
-    private PlacesService mPlacesService;
+    private final PlacesService mPlacesService;
 
     public PlacesRepositoryImpl() {
         Retrofit retrofit = new Retrofit.Builder()

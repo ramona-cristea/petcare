@@ -56,8 +56,8 @@ public class AddPetActivity extends AppCompatActivity implements View.OnClickLis
 
     private ImageFileSelector mImageFileSelector;
 
-    int mPetGender = Gender.MALE;
-    Pet mPet;
+    private int mPetGender = Gender.MALE;
+    private Pet mPet;
 
     private static final int REQUEST_PERMISSION_STORAGE = 101;
     private static final int REQUEST_PERMISSION_CAMERA = 102;
@@ -317,16 +317,15 @@ public class AddPetActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void selectImage() {
-        final CharSequence[] items = { "Take Photo", "Choose from Gallery",
-                "Cancel" };
+        String[] photoOptions = getResources().getStringArray(R.array.photo_options);
         AlertDialog.Builder builder = new AlertDialog.Builder(AddPetActivity.this);
-        builder.setTitle("Add Photo");
-        builder.setItems(items, (dialog, item) -> {
-            if (items[item].equals("Take Photo")) {
+        builder.setTitle(getString(R.string.add_photo));
+        builder.setItems(photoOptions, (dialog, item) -> {
+            if (photoOptions[item].equals(getString(R.string.take_photo))) {
                 takePhoto();
-            } else if (items[item].equals("Choose from Gallery")) {
+            } else if (photoOptions[item].equals(getString(R.string.choose_from_gallery))) {
                 selectPhotoFromGallery();
-            } else if (items[item].equals("Cancel")) {
+            } else if (photoOptions[item].equals(getString(R.string.cancel))) {
                 dialog.dismiss();
             }
         });
