@@ -1,14 +1,14 @@
 package com.ramona.petcare.model;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MediatorLiveData;
-import android.arch.lifecycle.ViewModel;
-import android.support.annotation.NonNull;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
+import androidx.lifecycle.ViewModel;
+import androidx.annotation.NonNull;
 
 import com.ramona.petcare.api.PlacesRepository;
 import com.ramona.petcare.api.PlacesRepositoryImpl;
 
-public class PlacesResponseViewModel extends ViewModel{
+public class PlacesResponseViewModel extends ViewModel {
     private final MediatorLiveData<PlacesApiResponse> mPlacesWrapper;
     private final MediatorLiveData<PlaceDetailsResponse> mPlaceDetailsWrapper;
 

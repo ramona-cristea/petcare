@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,14 +8,14 @@
     android:fitsSystemWindows="true"
     android:id="@+id/pet_details_layout">
 
-    <android.support.design.widget.AppBarLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <android.support.design.widget.CollapsingToolbarLayout
+        <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -40,18 +40,18 @@
                 android:layout_gravity="bottom"
                 android:background="@drawable/scrim"/>
 
-            <android.support.v7.widget.Toolbar
+            <androidx.appcompat.widget.Toolbar
                 android:id="@+id/anim_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-        </android.support.design.widget.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-    </android.support.design.widget.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
+    <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollableview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:text="@string/pet_is_adopted"
                 android:textColor="@color/white" />
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_details_overview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/guideline_overview"
                     app:layout_constraintStart_toEndOf="@+id/image_overview" />
 
-                <android.support.constraint.Guideline
+                <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline_overview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/image_overview_content_description"
                     app:srcCompat="@drawable/vector_pet_overview" />
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/details_overview_separator"
@@ -182,7 +182,7 @@
                 android:layout_below="@id/layout_details_overview"
                 android:background="@color/divider_color" />
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_details_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/guideline_info"
                     app:layout_constraintStart_toEndOf="@+id/image_info" />
 
-                <android.support.constraint.Guideline
+                <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/image_info_content_description"
                     app:srcCompat="@drawable/vector_info" />
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/details_info_separator"
@@ -262,7 +262,7 @@
                 android:layout_below="@id/layout_details_info"
                 android:background="@color/divider_color" />
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_details_measurement"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -320,7 +320,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/guideline_measurement"
                     app:layout_constraintStart_toEndOf="@+id/image_measurement" />
 
-                <android.support.constraint.Guideline
+                <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/guideline_measurement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -333,7 +333,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/image_measurement_content_description"
                     app:srcCompat="@drawable/vector_measurement" />
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/details_measurement_separator"
@@ -342,7 +342,7 @@
                 android:layout_below="@id/layout_details_measurement"
                 android:background="@color/divider_color" />
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_details_health_notes"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -381,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/image_health_notes_content_description"
                     app:srcCompat="@drawable/vector_health_notes" />
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/details_health_notes_separator"
@@ -390,7 +390,7 @@
                 android:layout_below="@id/layout_details_health_notes"
                 android:background="@color/divider_color" />
 
-            <android.support.v7.widget.AppCompatButton
+            <androidx.appcompat.widget.AppCompatButton
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:id="@+id/button_search_vet"
                 android:layout_width="wrap_content"
@@ -407,9 +407,9 @@
 
         </RelativeLayout>
 
-    </android.support.v4.widget.NestedScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-    <android.support.design.widget.FloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_edit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -419,4 +419,4 @@
         app:layout_anchor="@+id/appbar"
         app:layout_anchorGravity="bottom|right|end" />
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,99 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "9beac25342f6877f93eb28df59fd5eff",
+    "entities": [
+      {
+        "tableName": "Pet",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `pet_name` TEXT, `pet_picture_path` TEXT, `pet_breed` TEXT, `pet_age` TEXT, `pet_temper` TEXT, `pet_gender` INTEGER NOT NULL, `neutered_status` INTEGER NOT NULL, `adoption_status` INTEGER NOT NULL, `pet_weight` TEXT, `pet_height` TEXT, `health_notes` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "petName",
+            "columnName": "pet_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "petPicturePath",
+            "columnName": "pet_picture_path",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "petBreed",
+            "columnName": "pet_breed",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "petAge",
+            "columnName": "pet_age",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "petTemper",
+            "columnName": "pet_temper",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "petGender",
+            "columnName": "pet_gender",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isNeutered",
+            "columnName": "neutered_status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isAdopted",
+            "columnName": "adoption_status",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "petWeight",
+            "columnName": "pet_weight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "petHeight",
+            "columnName": "pet_height",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "additionalHealthNotes",
+            "columnName": "health_notes",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uid"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"9beac25342f6877f93eb28df59fd5eff\")"
+    ]
+  }
+}

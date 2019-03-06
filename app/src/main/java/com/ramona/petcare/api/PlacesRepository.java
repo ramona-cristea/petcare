@@ -1,6 +1,6 @@
 package com.ramona.petcare.api;
 
-import android.arch.lifecycle.LiveData;
+import androidx.lifecycle.LiveData;
 
 import com.ramona.petcare.model.PlaceDetailsResponse;
 import com.ramona.petcare.model.PlacesApiResponse;

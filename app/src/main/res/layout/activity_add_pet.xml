@@ -44,7 +44,7 @@
                 android:layout_centerVertical="true"
                 android:visibility="invisible"/>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/container_pet_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                     android:inputType="textCapSentences"
                     android:nextFocusDown="@+id/edit_pet_breed"
                     />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </RelativeLayout>
 
@@ -87,7 +87,7 @@
             android:layout_marginTop="@dimen/margin_16dp"
             android:layout_marginStart="@dimen/margin_16dp"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/container_pet_breed"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,9 +106,9 @@
                 android:inputType="textCapSentences"
                 android:nextFocusDown="@+id/edit_pet_age"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/container_pet_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,9 +126,9 @@
                 android:inputType="text"
                 android:nextFocusDown="@+id/edit_pet_temper"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/container_pet_temper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -146,7 +146,7 @@
                 android:inputType="textCapSentences"
                 android:nextFocusDown="@+id/radio_male"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:id="@+id/overview_data_separator"
@@ -246,7 +246,7 @@
             android:layout_marginTop="@dimen/margin_16dp"
             android:layout_marginStart="@dimen/margin_16dp"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/container_pet_weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -265,9 +265,9 @@
                 android:inputType="number|numberDecimal"
                 android:nextFocusDown="@+id/edit_pet_height"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/container_pet_height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -285,7 +285,7 @@
                 android:inputType="number"
                 android:nextFocusDown="@+id/edit_pet_health_notes"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <View
             android:id="@+id/measurement_data_separator"
@@ -307,7 +307,7 @@
             android:layout_marginTop="@dimen/margin_16dp"
             android:layout_marginStart="@dimen/margin_16dp"/>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/container_pet_health_notes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -326,7 +326,7 @@
                 android:hint="@string/additional_health_notes"
                 android:inputType="textCapSentences"
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </RelativeLayout>
 </ScrollView>
